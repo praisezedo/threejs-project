@@ -1,0 +1,196 @@
+/* filepath: c:\Users\USER\Documents\New folder (2)\lesson.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(40deg,gray,black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+h1 {
+    color: white;
+    text-align: center;
+    box-shadow: 1px 1px 10px white;
+}
+.chat-container {
+    background: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 500px;
+    max-width: 90vw;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px white;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+}
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 12px;
+    background: black;
+    color: white;
+}
+.message {
+    margin: 8px 0;
+}
+.user {
+    text-align: right;
+    color: #1976d2;
+    background: white;
+    width: 60%;
+    padding: 15px;
+    border-radius: 10px;
+}
+.bot {
+    text-align: left;
+    color: white;
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+}
+.input-area {
+    display: flex;
+    gap: 8px;
+}
+#user-input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid  wheat;
+    color: white;
+    background-color: #333;
+}
+#send-btn {
+    padding: 8px 16px;
+    border: none;
+    background: #1976d2;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#send-btn:disabled {
+    background: #aaa;
+}
+.container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-reflect: below 0 
+  linear-gradient(transparent,transparent,
+  #00000055);
+}
+
+.loader {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: animate 2s linear infinite;
+}
+.loader1::before,
+.loader2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top , transparent , #00fff966);
+  background-size: 100px 180px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+
+} 
+.loader2,
+.loader4 {
+
+  animation-delay: -1s;
+  filter: hue-rotate(290deg);
+}
+.loader i {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  --color:#00fff9;
+  background: var(--color);
+  border-radius: 50%;
+  z-index: 100;
+  box-shadow: 0 0 10px var(--color),
+  0 0 20px var(--color),
+  0 0 30px var(--color),
+  0 0 40px var(--color),
+  0 0 50px var(--color),
+  0 0 60px var(--color),
+  0 0 70px var(--color),
+  0 0 80px var(--color),
+  0 0 90px var(--color),
+  0 0 100px var(--color)
+
+}
+.loader span {
+  position: absolute;
+  inset: 20px;
+  background: #000;
+  border-radius: 50%;
+  z-index: 1;
+}
+.container2 .loader1::before,
+.container2 .loader2::before {
+  background: linear-gradient(to top , transparent,#faa99e80);
+  
+}
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none; /* Allows clicks through to chat */
+    overflow: hidden;
+}
+
+.container, .container2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Optional: spread out loaders more if you want */
+}
+
+.loader {
+    width: 40vw;
+    height: 40vw;
+    max-width: 600px;
+    max-height: 600px;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+
