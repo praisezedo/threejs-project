@@ -1,3 +1,35 @@
 body {
     margin: 0;
+
+}
+canvas {
+    z-index: 1;
+    position: fixed;
+}
+#infobutton {
+    z-index: 10;
+    background: black;
+    color: white;
+    font-size: 2rem;
+     position: absolute;
+    left: 1400px;
+    top: 600px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    animation: move 3s infinite ease-in-out alternate-reverse;
+}
+#infobutton:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+}
+@keyframes move {
+    0% {
+        transform: translateY(10px);
+        opacity: 0.1;
+    }
+    10% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
 }
