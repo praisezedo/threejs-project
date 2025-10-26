@@ -6,30 +6,37 @@ canvas {
     z-index: 1;
     position: fixed;
 }
-#infobutton {
-    z-index: 10;
-    background: black;
+a , h1 {
+    z-index: 70;
+    position: relative;
     color: white;
-    font-size: 2rem;
-     position: absolute;
-    left: 1400px;
-    top: 600px;
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    animation: move 3s infinite ease-in-out alternate-reverse;
+    text-decoration: none;
+    font-size: 2.5rem;
 }
-#infobutton:hover {
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0);
+a {
+    background: black;
+    padding: 10px;
+     left: 880px;
+     top: 300px;
+    border-radius: 10px;
+    border: none;
+    animation: move 3s infinite alternate-reverse;
+}
+a:hover {
+  background: rgba(0, 0, 0, 0.158);
+}
+h1 {
+    top:15px;
 }
 @keyframes move {
     0% {
         transform: translateY(10px);
         opacity: 0.1;
+        transform: rotateY(0);
     }
-    10% {
+    100% {
         transform: translateY(-10px);
         opacity: 1;
+         transform: rotateY(180deg);
     }
 }
