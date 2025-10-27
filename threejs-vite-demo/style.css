@@ -3,8 +3,12 @@ body {
 
 }
 canvas {
-    z-index: 1;
+    z-index: -10;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 a , h1 {
     z-index: 70;
@@ -12,12 +16,13 @@ a , h1 {
     color: white;
     text-decoration: none;
     font-size: 2.5rem;
+
 }
 a {
     background: black;
     padding: 10px;
-     left: 880px;
-     top: 300px;
+    left: 880px;
+    top: 310px;
     border-radius: 10px;
     border: none;
     animation: move 3s infinite alternate-reverse;
@@ -26,17 +31,29 @@ a:hover {
   background: rgba(0, 0, 0, 0.158);
 }
 h1 {
-    top:15px;
+    top:2px;
+}
+.blackout {
+    background: rgba(0, 0, 0, 0.342);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: absolute;
+}
+iframe {
+    z-index: 200;
+    top: 50px;
+    left: 200px;
+    position: relative;
 }
 @keyframes move {
     0% {
         transform: translateY(10px);
         opacity: 0.1;
-        transform: rotateY(0);
+       
     }
     100% {
         transform: translateY(-10px);
         opacity: 1;
-         transform: rotateY(180deg);
     }
 }
